@@ -141,8 +141,10 @@ if __name__ == "__main__":
 
     event_details = data.parse('event_details')
     event_date = pd.to_datetime(event_details.loc[0, 'start_date'])
+    event_name = event_details["event_name"].iloc[0] #"DMEXCO 2024"
+    event_city = event_details["city"]
+    event_country = event_details["country"]
 
-    event_name = "DMEXCO 2024"
 
     # Baseline Model:
     baseline_model = SimpleEventModel(post_details, event_name)
