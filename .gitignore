@@ -1,0 +1,5 @@
+*.csv
+*.xlsx
+.env
+.DS_Store
+*.egg-info

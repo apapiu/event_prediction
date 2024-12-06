@@ -1,0 +1,23 @@
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "event-model"
+version = "0.1.0"
+description = "Event attendance prediction models"
+requires-python = ">=3.8"
+dependencies = [
+    "pandas>=1.5.0",
+    "openai>=1.0.0",
+    "openpyxl",  # for Excel file support
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+]
+
+[tool.setuptools]
+packages = ["models"]
